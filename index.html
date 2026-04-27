@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>KFC | It's Finger Lickin' Good</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-surface": "#2f3131",
+            "surface-dim": "#dadada",
+            "on-surface": "#1a1c1c",
+            "on-background": "#1a1c1c",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e2e2e2",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#ffb3b2",
+            "on-surface-variant": "#5c3f3f",
+            "background": "#f9f9f9",
+            "on-primary-fixed": "#410008",
+            "surface-variant": "#e2e2e2",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#575f72",
+            "primary-container": "#c1002d",
+            "outline": "#906f6e",
+            "on-error": "#ffffff",
+            "on-primary-container": "#ffcfce",
+            "error": "#ba1a1a",
+            "surface-bright": "#f9f9f9",
+            "outline-variant": "#e5bdbc",
+            "secondary": "#7d5700",
+            "surface-container-high": "#e8e8e8",
+            "on-tertiary-fixed": "#141b2c",
+            "primary-fixed-dim": "#ffb3b2",
+            "surface-tint": "#bf002c",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#f3f3f3",
+            "secondary-fixed": "#ffdeaa",
+            "on-primary-fixed-variant": "#920020",
+            "on-secondary-container": "#6b4b00",
+            "tertiary-fixed-dim": "#bfc6dc",
+            "surface-container": "#eeeeee",
+            "inverse-on-surface": "#f1f1f1",
+            "tertiary-fixed": "#dbe2f9",
+            "surface": "#f9f9f9",
+            "on-primary": "#ffffff",
+            "tertiary": "#40485a",
+            "primary": "#940020",
+            "secondary-fixed-dim": "#ffba2c",
+            "on-secondary-fixed-variant": "#5f4100",
+            "on-secondary": "#ffffff",
+            "on-tertiary-container": "#d2daf0",
+            "secondary-container": "#feb71a",
+            "on-tertiary-fixed-variant": "#3f4759",
+            "primary-fixed": "#ffdad9",
+            "on-secondary-fixed": "#271900"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "32px",
+            "section-padding": "120px",
+            "unit": "8px",
+            "gutter": "24px",
+            "container-max": "1280px"
+          },
+          "fontFamily": {
+            "body-lg": ["beVietnamPro"],
+            "headline-xl": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "label-bold": ["Space Grotesk"],
+            "body-md": ["beVietnamPro"],
+            "headline-lg": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+            "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+            "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .slanted-bg {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
+
+    .stripes-bg {
+      background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.1) 10px, rgba(255, 255, 255, 0.1) 20px);
+    }
+
+    .kfc-stripes {
+      background: repeating-linear-gradient(90deg, #940020, #940020 40px, #ffffff 40px, #ffffff 80px);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+  <nav
+    class="fixed top-0 w-full z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-b-4 border-zinc-900 dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+    <div class="max-w-[1280px] mx-auto flex justify-between items-center px-6 h-20">
+      <div class="flex items-center gap-8">
+        <span class="text-3xl font-black text-red-600 tracking-widest font-['Space_Grotesk']" style="">KFC</span>
+        <div class="hidden md:flex gap-6">
+          <a class="text-red-600 border-b-2 border-red-600 pb-1 font-['Space_Grotesk'] uppercase tracking-tighter font-bold"
+            href="#" style="">Menu</a>
+          <a class="text-zinc-900 dark:text-zinc-100 hover:text-red-600 transition-colors font-['Space_Grotesk'] uppercase tracking-tighter font-bold"
+            href="#" style="">Deals</a>
+          <a class="text-zinc-900 dark:text-zinc-100 hover:text-red-600 transition-colors font-['Space_Grotesk'] uppercase tracking-tighter font-bold"
+            href="#" style="">Our Story</a>
+          <a class="text-zinc-900 dark:text-zinc-100 hover:text-red-600 transition-colors font-['Space_Grotesk'] uppercase tracking-tighter font-bold"
+            href="#" style="">Find a KFC</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div
+          class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border-2 border-zinc-900">
+          <span class="material-symbols-outlined text-zinc-900" data-icon="search" style="">search</span>
+          <input class="bg-transparent border-none focus:ring-0 text-sm font-label-bold" placeholder="Search..."
+            type="text">
+        </div>
+        <button
+          class="bg-primary text-on-primary px-6 py-2 font-['Space_Grotesk'] font-bold uppercase tracking-widest hover:bg-zinc-900 transition-all duration-200 active:translate-y-0.5"
+          style="">SIGN IN</button>
+        <button
+          class="bg-zinc-900 text-white px-6 py-2 font-['Space_Grotesk'] font-bold uppercase tracking-widest hover:bg-red-600 transition-all duration-200 active:translate-y-0.5"
+          style="">ORDER NOW</button>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="relative pt-20 overflow-hidden bg-primary min-h-[921px] flex items-center slanted-bg">
+    <div class="absolute inset-0 stripes-bg opacity-20"></div>
+    <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="text-white">
+        <span
+          class="inline-block bg-secondary-container text-on-secondary-fixed px-4 py-1 mb-6 font-label-bold rounded-full"
+          style="">LIMITED TIME ONLY</span>
+        <h1 class="font-headline-xl text-white mb-6 uppercase" style="">IT'S FINGER <br><span
+            class="text-secondary-container" style="">LICKIN'</span> GOOD</h1>
+        <p class="font-body-lg text-white/90 mb-10 max-w-lg" style="">Experience the legendary 11 herbs and spices in
+          every bite. Our world-famous chicken is pressure cooked to lock in flavor and served hot for that unmistakable
+          crunch.</p>
+        <div class="flex flex-wrap gap-4">
+          <button
+            class="bg-white text-primary px-10 py-5 font-headline-md text-xl uppercase tracking-tighter hover:bg-zinc-900 hover:text-white transition-all shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
+            style="">Order Now</button>
+          <button
+            class="border-4 border-white text-white px-10 py-5 font-headline-md text-xl uppercase tracking-tighter hover:bg-white hover:text-primary transition-all"
+            style="">View Menu</button>
+        </div>
+      </div>
+      <div class="relative flex justify-center">
+        <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container rounded-full blur-[100px] opacity-30">
+        </div>
+        <img alt="KFC Bucket" class="w-full max-w-[600px] drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] transform rotate-3"
+          data-alt="high-quality close-up of a classic red and white striped KFC bucket filled with golden crispy fried chicken pieces with steam rising and warm lighting"
+          src="https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/250px-KFC_logo.svg.png" style="">
+      </div>
+    </div>
+  </header>
+  <section class="max-w-[1100px] mx-auto -mt-16 relative z-30 px-6">
+    <div
+      class="bg-white p-8 border-4 border-zinc-900 shadow-[10px_10px_0px_0px_rgba(148,0,32,1)] flex flex-col md:flex-row items-center gap-6">
+      <div class="flex-1 w-full">
+        <p class="font-label-bold text-zinc-500 mb-2" style="">HUNGRY? FIND A RESTAURANT NEAR YOU</p>
+        <div class="flex gap-4 border-b-2 border-zinc-200 pb-2">
+          <span class="material-symbols-outlined text-primary" data-icon="location_on" style="">location_on</span>
+          <input class="w-full border-none focus:ring-0 font-body-lg" placeholder="Enter your city or zip code"
+            type="text">
+        </div>
+      </div>
+      <button
+        class="bg-zinc-900 text-white px-8 py-4 font-label-bold uppercase w-full md:w-auto hover:bg-primary transition-colors"
+        style="">Find a Store</button>
+    </div>
+  </section>
+  <section class="py-section-padding max-w-[1280px] mx-auto px-6">
+    <div class="flex justify-between items-end mb-16">
+      <div>
+        <span class="font-label-bold text-primary" style="">CRAVEABLE CLASSICS</span>
+        <h2 class="font-headline-lg uppercase text-zinc-900" style="">Fan Favorites</h2>
+      </div>
+      <div class="flex gap-4">
+        <button class="p-3 border-2 border-zinc-900 rounded-full hover:bg-primary hover:text-white transition-all"
+          style="">
+          <span class="material-symbols-outlined" data-icon="arrow_back" style="">arrow_back</span>
+        </button>
+        <button class="p-3 border-2 border-zinc-900 rounded-full hover:bg-primary hover:text-white transition-all"
+          style="">
+          <span class="material-symbols-outlined" data-icon="arrow_forward" style="">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div
+        class="group bg-white border-2 border-zinc-100 hover:border-zinc-900 transition-all p-6 relative overflow-hidden flex flex-col h-full">
+        <span
+          class="absolute top-4 right-4 bg-secondary-container text-on-secondary-fixed px-3 py-1 font-label-bold rounded-full z-10 text-xs"
+          style="">BESTSELLER</span>
+        <div class="aspect-square mb-6 overflow-hidden">
+          <img alt="Zinger Burger"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            data-alt="dramatic studio lighting on a spicy zinger burger with crispy breaded chicken breast fresh lettuce and creamy mayo on a sesame bun"
+            src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1634025439/01g8tgrny7tzymsrw60mp58w2c.jpg"
+            style="">
+        </div>
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-headline-md text-2xl uppercase" style="">Zinger Burger</h3>
+          <span class="font-headline-md text-primary" style="">Rp.50.000,00</span>
+        </div>
+        <p class="font-body-md text-zinc-600 mb-8 flex-grow" style="">Our signature spicy chicken burger, featuring a
+          double-breaded chicken breast, lettuce and mayo.</p>
+        <button
+          class="w-full border-2 border-zinc-900 py-3 font-label-bold uppercase group-hover:bg-zinc-900 group-hover:text-white transition-all flex items-center justify-center gap-2"
+          style="">
+          Add to Bucket <span class="material-symbols-outlined text-sm" data-icon="shopping_basket"
+            style="">shopping_basket</span>
+        </button>
+      </div>
+      <!-- Item 2 -->
+      <div
+        class="group bg-white border-2 border-zinc-100 hover:border-zinc-900 transition-all p-6 relative overflow-hidden flex flex-col h-full">
+        <div class="aspect-square mb-6 overflow-hidden">
+          <img alt="Hot &amp; Crispy Chicken"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            data-alt="three pieces of hot and crispy kfc style fried chicken on a textured dark plate with coarse sea salt and herbs around it"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX0VKa-yu4BEje007v6quIC4_3iQjcFaT_vg&amp;s"
+            style="">
+        </div>
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-headline-md text-2xl uppercase" style="">Hot &amp; Crispy</h3>
+          <span class="font-headline-md text-primary" style="">Rp.80.000,00</span>
+        </div>
+        <p class="font-body-md text-zinc-600 mb-8 flex-grow" style="">3 pieces of our Hot &amp; Crispy chicken. Breaded
+          with a spicy mix and cooked to perfection.</p>
+        <button
+          class="w-full border-2 border-zinc-900 py-3 font-label-bold uppercase group-hover:bg-zinc-900 group-hover:text-white transition-all flex items-center justify-center gap-2"
+          style="">
+          Add to Bucket <span class="material-symbols-outlined text-sm" data-icon="shopping_basket"
+            style="">shopping_basket</span>
+        </button>
+      </div>
+      <!-- Item 3 -->
+      <div
+        class="group bg-white border-2 border-zinc-100 hover:border-zinc-900 transition-all p-6 relative overflow-hidden flex flex-col h-full">
+        <div class="aspect-square mb-6 overflow-hidden">
+          <img alt="Twister" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            data-alt="a grilled chicken twister wrap with fresh tomatoes lettuce and sauce wrapped in a soft tortilla isolated on a white background"
+            src="https://media-cdn.tripadvisor.com/media/photo-s/26/b5/7a/33/kfc-dunked-twister.jpg" style="">
+        </div>
+        <div class="flex justify-between items-start mb-4">
+          <h3 class="font-headline-md text-2xl uppercase" style="">Classic Twister</h3>
+          <span class="font-headline-md text-primary" style="">Rp.40.000,00</span>
+        </div>
+        <p class="font-body-md text-zinc-600 mb-8 flex-grow" style="">Toasted tortilla wrapped around delicious chicken
+          strips, lettuce, tomatoes, and pepper mayo.</p>
+        <button
+          class="w-full border-2 border-zinc-900 py-3 font-label-bold uppercase group-hover:bg-zinc-900 group-hover:text-white transition-all flex items-center justify-center gap-2"
+          style="">
+          Add to Bucket <span class="material-symbols-outlined text-sm" data-icon="shopping_basket"
+            style="">shopping_basket</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="bg-zinc-900 text-white relative overflow-hidden py-section-padding">
+    <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+      <div class="kfc-stripes w-full h-full transform -skew-x-12"></div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+      <div class="relative">
+        <div class="absolute -top-10 -left-10 w-full h-full border-4 border-red-600 z-0"></div>
+        <img alt="Colonel Sanders Legacy"
+          class="w-full h-auto relative z-10 shadow-[20px_20px_0px_0px_rgba(148,0,32,1)]"
+          data-alt="stylized vintage black and white portrait of colonel sanders with modern red graphic elements and kitchen background in soft focus"
+          src="https://blog.logomyway.com/wp-content/uploads/2020/09/KFC-logo.jpg" style="">
+        <div class="absolute bottom-4 right-4 bg-primary px-6 py-4 z-20">
+          <span class="font-headline-md text-white" style="">SINCE 1952</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-label-bold text-primary mb-4 block" style="">OUR ORIGIN STORY</span>
+        <h2 class="font-headline-lg uppercase mb-8 leading-tight" style="">The Colonel's <br>Secret Legacy</h2>
+        <div class="space-y-6 font-body-lg text-zinc-400">
+          <p class="" style="">It all started with one man, a roadside gas station, and a passion for great food.
+            Harland Sanders perfected his "Original Recipe" over years of experimentation.</p>
+          <p class="" style="">The secret? A precise blend of 11 herbs and spices, locked away in a safe, and a unique
+            pressure-frying technique that ensures every piece is juicy on the inside and crispy on the outside.</p>
+        </div>
+        <div class="mt-12 grid grid-cols-3 gap-8">
+          <div>
+            <p class="font-headline-md text-white" style="">11</p>
+            <p class="font-label-bold text-zinc-500" style="">SECRET HERBS</p>
+          </div>
+          <div>
+            <p class="font-headline-md text-white" style="">145+</p>
+            <p class="font-label-bold text-zinc-500" style="">COUNTRIES</p>
+          </div>
+          <div>
+            <p class="font-headline-md text-white" style="">25K+</p>
+            <p class="font-label-bold text-zinc-500" style="">RESTAURANTS</p>
+          </div>
+        </div>
+        <button
+          class="mt-12 border-2 border-white text-white px-8 py-4 font-label-bold uppercase hover:bg-white hover:text-zinc-900 transition-all"
+          style="">Explore Our Heritage</button>
+      </div>
+    </div>
+  </section>
+  <section class="py-section-padding bg-surface-container-low border-y-8 border-primary relative overflow-hidden">
+    <div class="max-w-[1280px] mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-12">
+      <div class="lg:w-1/2">
+        <h2 class="font-headline-lg uppercase mb-4" style="">Get the <span class="text-primary" style="">KFC App</span>
+        </h2>
+        <p class="font-body-lg text-zinc-600 mb-8" style="">Exclusive deals, faster ordering, and Finger Lickin' rewards
+          at your fingertips. Download now and get $5 off your first order.</p>
+        <div class="flex gap-4">
+          <button
+            class="bg-zinc-900 text-white flex items-center gap-3 px-6 py-3 rounded-xl hover:bg-zinc-800 transition-all"
+            style="">
+            <span class="material-symbols-outlined text-3xl" data-icon="phone_iphone" style="">phone_iphone</span>
+            <div class="text-left">
+              <p class="text-[10px] opacity-70" style="">Download on the</p>
+              <p class="font-bold leading-none" style="">App Store</p>
+            </div>
+          </button>
+          <button
+            class="bg-zinc-900 text-white flex items-center gap-3 px-6 py-3 rounded-xl hover:bg-zinc-800 transition-all"
+            style="">
+            <span class="material-symbols-outlined text-3xl" data-icon="shop" style="">shop</span>
+            <div class="text-left">
+              <p class="text-[10px] opacity-70" style="">Get it on</p>
+              <p class="font-bold leading-none" style="">Google Play</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="lg:w-1/3 w-full">
+        <div class="bg-white p-8 border-4 border-zinc-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+          <p class="font-label-bold mb-4" style="">JOIN THE CLUB FOR EXCLUSIVE DEALS</p>
+          <div class="space-y-4">
+            <input class="w-full border-2 border-zinc-200 p-4 font-body-md focus:border-primary outline-none"
+              placeholder="Your Email Address" type="email">
+            <button
+              class="w-full bg-primary text-white py-4 font-label-bold uppercase hover:bg-zinc-900 transition-colors"
+              style="">Sign Me Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-zinc-900 dark:bg-black w-full py-16 border-t-8 border-red-600">
+    <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-4">
+      <div class="col-span-1 lg:col-span-1">
+        <span class="text-white font-black text-2xl font-['Space_Grotesk'] tracking-widest block mb-6"
+          style="">KFC</span>
+        <p class="text-zinc-400 font-['Space_Grotesk'] text-sm uppercase tracking-widest leading-relaxed" style="">
+          Case Study Database Systems Module 9 by Hanif Mulia Nugroho 2406369066</p>
+        <div class="flex gap-4 mt-8">
+          <a class="w-10 h-10 border border-zinc-700 flex items-center justify-center text-white hover:bg-red-600 transition-all"
+            href="#" style=""><span class="material-symbols-outlined" data-icon="facebook"
+              style="">social_leaderboard</span></a>
+          <a class="w-10 h-10 border border-zinc-700 flex items-center justify-center text-white hover:bg-red-600 transition-all"
+            href="#" style=""><span class="material-symbols-outlined" data-icon="camera" style="">camera</span></a>
+          <a class="w-10 h-10 border border-zinc-700 flex items-center justify-center text-white hover:bg-red-600 transition-all"
+            href="#" style=""><span class="material-symbols-outlined" data-icon="play_circle"
+              style="">play_circle</span></a>
+        </div>
+      </div>
+      <div>
+        <p class="text-white font-bold mb-6 font-['Space_Grotesk'] uppercase tracking-widest" style="">Navigation</p>
+        <ul class="space-y-3">
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Menu</a></li>
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Deals</a></li>
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Our Story</a></li>
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Find a KFC</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-bold mb-6 font-['Space_Grotesk'] uppercase tracking-widest" style="">Support</p>
+        <ul class="space-y-3">
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Contact Us</a></li>
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Nutrition</a></li>
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Privacy Policy</a></li>
+          <li class="" style=""><a
+              class="text-zinc-400 hover:text-red-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest hover:underline decoration-2 underline-offset-4"
+              href="#" style="">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-bold mb-6 font-['Space_Grotesk'] uppercase tracking-widest" style="">Store Locator</p>
+        <div class="bg-zinc-800 p-4 border-l-4 border-red-600">
+          <p class="text-zinc-300 text-xs mb-3" style="">FIND YOUR NEAREST KFC</p>
+          <div class="flex">
+            <input class="bg-zinc-900 border-none text-white text-sm w-full p-2 focus:ring-1 focus:ring-red-600"
+              placeholder="Zip Code" type="text">
+            <button class="bg-red-600 text-white px-3" style=""><span class="material-symbols-outlined text-sm"
+                data-icon="search" style="">search</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-6 mt-16 pt-8 border-t border-zinc-800 text-center md:text-left">
+      <p class="text-zinc-500 font-['Space_Grotesk'] text-sm uppercase tracking-widest" style="">© 2024 KFC
+        International. All Rights Reserved. IT'S FINGER LICKIN' GOOD.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
